@@ -7,13 +7,11 @@
 	</div>
 </div>
 <script type="text/javascript">
-$(function(){
-	require(['require', 'jquery'], function(req, $) {
-		$('#authoringButton').click(function(e) {
-			//e.preventDefault();
-			uri = '<?=_url('authoring', 'Process', 'wfAuthoring', array('uri' => get_data('processUri')))?>';
-			helpers.openTab('<?=get_data('label')?>', uri);
-		});
-	});
+require(['jquery', 'helpers'], function($, helpers) {
+        $('#authoringButton').click(function(e) {
+                //e.preventDefault();
+                uri = '<?=_url('authoring', 'Process', 'wfAuthoring', array('uri' => get_data('processUri')))?>';
+                helpers.openTab('<?=get_data('label')?>', uri);
+        });
 });
 </script>
