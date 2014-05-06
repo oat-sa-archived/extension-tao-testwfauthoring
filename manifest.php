@@ -30,11 +30,15 @@ $taopath = dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'tao'.DIRECTORY_SEPARA
 
 return array(
 	'name' => 'taoWfAdvTest',
-	'description' => 'TAO Workflow Advanced Test definition',
+	'label' => 'Workflow advance test model',
+    'description' => 'TAO Workflow Advanced Test definition',
     'license' => 'GPL-2.0',
-    'version' => '2.5',
+    'version' => '2.6',
 	'author' => 'Open Assessment Technologies',
-	'dependencies' => array('taoWfTest', 'wfAuthoring'),
+	'requires' => array(
+	    'taoWfTest' => '2.6',
+	    'wfAuthoring' => '2.6'
+    ),
 	'models' => array(
 		'http://www.tao.lu/Ontologies/TAOTest.rdf'
 	),
