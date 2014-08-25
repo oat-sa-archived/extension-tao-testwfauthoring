@@ -36,8 +36,8 @@ return array(
     'version' => '2.6',
 	'author' => 'Open Assessment Technologies',
 	'requires' => array(
-	    'taoWfTest' => '2.6',
-	    'wfAuthoring' => '2.6'
+	    'taoWfTest' => '>=2.5',
+	    'wfAuthoring' => '>=2.5'
     ),
 	'models' => array(
 		'http://www.tao.lu/Ontologies/TAOTest.rdf'
