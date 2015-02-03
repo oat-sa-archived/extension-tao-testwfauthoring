@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     /**
      * Remove bundled and bundling files
      */
-    clean.taowfadvtestbundle = [out,  root + '/taoWfAdvTest/views/js/controllers.min.js'];
+    clean.taowfadvtestbundle = [out];
     
     /**
      * Compile tao files into a bundle 
