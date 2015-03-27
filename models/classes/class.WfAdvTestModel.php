@@ -31,14 +31,16 @@ class taoWfAdvTest_models_classes_WfAdvTestModel
 	extends taoWfTest_models_classes_WfTestModel
 	implements taoTests_models_classes_TestModel
 {
-    // --- ASSOCIATIONS ---
-
-    // --- ATTRIBUTES ---
-
-    // --- OPERATIONS ---
+    /**
+     * @see taoTests_models_classes_TestModel::getAuthoringUrl()
+     */
+    public function getAuthoringUrl( core_kernel_classes_Resource $test) {
+    	$process = $test->getUniquePropertyValue(new core_kernel_classes_Property(TEST_TESTCONTENT_PROP));
+        return _url('authoring', 'Process', 'wfAuthoring', array('uri' => $process->getUri()));
+    }
 
     /**
-     * (non-PHPdoc)
+     * @deprecated
      * @see taoTests_models_classes_TestModel::getAuthoring()
      */
     public function getAuthoring( core_kernel_classes_Resource $test) {
